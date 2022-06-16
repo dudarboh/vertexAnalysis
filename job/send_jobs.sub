@@ -1,0 +1,15 @@
+executable = /afs/desy.de/user/d/dudarboh/analysis/vertex/vertexAnalysis/job/job.sh
+initialdir = /nfs/dust/ilc/user/dudarboh/jobs
+arguments = $(file) $(ClusterId) $(ProcId) $(job_name)
+max_materialize = 500
+
+log = ../log/$(ClusterId)_$(ProcId).log
+output = ../out/$(ClusterId)_$(ProcId).out
+error = ../err/$(ClusterId)_$(ProcId).err
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 10KB
+
+job_name=2f_Z_hadronic_eLpR
+queue file from [0:1000] /afs/desy.de/user/d/dudarboh/analysis/data/DST/250GeV/2f_Z_hadronic_E250_eLpR_DST.txt
